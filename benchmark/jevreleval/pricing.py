@@ -81,16 +81,28 @@ def load_price_table() -> PriceTable:
         )
 
 
-def cost_usd(
-    price_table: PriceTable, model: str, input_tokens: int, output_tokens: int
-) -> float:
-    """USD cost of one call, using the model's exact rate or a fallback."""
+def effective_rate(
+    price_table: PriceTable, model: str
+) -> tuple[float, float]:
+    """The (input, output) USD-per-1M rates ``cost_usd`` applies for ``model``.
+
+    Models not listed in the price table (routing aliases such as
+    ``openrouter/auto``) fall back to the configured rate constants, so the
+    snapshot and the ledger always agree on what a call cost.
+    """
     rate = price_table.price(model)
     if rate is None:
         rate = price_table.rates_usd_per_1m.get(
             "*", (FALLBACK_INPUT_USD_PER_1M, FALLBACK_OUTPUT_USD_PER_1M)
         )
-    input_rate, output_rate = rate
+    return rate
+
+
+def cost_usd(
+    price_table: PriceTable, model: str, input_tokens: int, output_tokens: int
+) -> float:
+    """USD cost of one call, using the model's exact rate or a fallback."""
+    input_rate, output_rate = effective_rate(price_table, model)
     return (input_tokens / _TOKENS_PER_UNIT) * input_rate + (
         output_tokens / _TOKENS_PER_UNIT
     ) * output_rate
@@ -115,4 +127,4 @@ def _env_float(name: str) -> float | None:
 _CATALOG_TIMEOUT_S = 15.0
 
 
-__all__ = ["PriceTable", "load_price_table", "cost_usd"]
+__all__ = ["PriceTable", "effective_rate", "load_price_table", "cost_usd"]

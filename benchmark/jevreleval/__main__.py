@@ -43,7 +43,7 @@ from jevreleval.ledger import (
     record_llm_judge_call,
 )
 from jevreleval.metrics import rank_metrics, summarize
-from jevreleval.pricing import load_price_table
+from jevreleval.pricing import effective_rate, load_price_table
 from jevreleval.retrieval import BM25Retriever
 
 __version__ = "0.2.0"
@@ -326,10 +326,6 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  [{index}/{len(queries)}] done ({_safe_query(query)})", end="\r")
     print()
 
-    price_snapshot = {
-        model_id: {"input_usd_per_1m": rate[0], "output_usd_per_1m": rate[1]}
-        for model_id, rate in price_table.rates_usd_per_1m.items()
-    }
     total_by_model: dict[str, dict[str, object]] = {}
     for record in ledger.records:
         bucket = total_by_model.setdefault(
@@ -340,6 +336,27 @@ def main(argv: list[str] | None = None) -> int:
         bucket["input_tokens"] += record.input_tokens
         bucket["output_tokens"] += record.output_tokens
         bucket["cost_usd"] = round(bucket["cost_usd"] + record.cost_usd, 8)
+
+    # Catalog snapshot, tagged per entry, plus the effective rates for every
+    # used model the catalog does not publish (routing aliases such as
+    # openrouter/auto) so the pricing table always has a row per model that ran.
+    price_snapshot: dict[str, dict[str, object]] = {
+        model_id: {
+            "input_usd_per_1m": rate[0],
+            "output_usd_per_1m": rate[1],
+            "source": "catalog" if model_id != "*" else price_table.source,
+        }
+        for model_id, rate in price_table.rates_usd_per_1m.items()
+    }
+    for model in total_by_model:
+        if model in price_snapshot:
+            continue
+        input_rate, output_rate = effective_rate(price_table, model)
+        price_snapshot[model] = {
+            "input_usd_per_1m": input_rate,
+            "output_usd_per_1m": output_rate,
+            "source": "fallback",
+        }
 
     document: dict[str, object] = {
         "run": {

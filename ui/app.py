@@ -133,16 +133,36 @@ def per_query_table(document: dict) -> list[dict]:
     return out
 
 
+#: Effective USD-per-1M rates the benchmark falls back to for models the
+#: OpenRouter catalog does not publish (e.g. routing aliases like
+#: ``openrouter/auto``), matching jevreleval's rate constants.
+_FALLBACK_INPUT_USD_PER_1M = 0.15
+_FALLBACK_OUTPUT_USD_PER_1M = 0.60
+
+
 def pricing_table(document: dict) -> list[dict]:
     """Rows of (model, input/output USD per 1M tokens) from a run."""
-    return [
+    pricing = document.get("pricing", {}) or {}
+    rows = [
         {
             "model": model,
             "input_usd_per_1m": _price(rate.get("input_usd_per_1m")),
             "output_usd_per_1m": _price(rate.get("output_usd_per_1m")),
+            "source": rate.get("source", "catalog"),
         }
-        for model, rate in sorted(document.get("pricing", {}).items())
+        for model, rate in sorted(pricing.items())
     ]
+    used = document.get("aggregates", {}).get("total_costs", {}) or {}
+    for model in sorted(set(used) - set(pricing)):
+        rows.append(
+            {
+                "model": model,
+                "input_usd_per_1m": _price(_FALLBACK_INPUT_USD_PER_1M),
+                "output_usd_per_1m": _price(_FALLBACK_OUTPUT_USD_PER_1M),
+                "source": "fallback (unlisted)",
+            }
+        )
+    return rows
 
 
 def _price(value: float | None) -> str:
@@ -265,8 +285,10 @@ def render(document: dict, path: Path) -> None:
         if not rows:
             st.info("No pricing snapshot in this run.")
         st.caption(
-            "Full OpenRouter catalog snapshot captured at run time; rates are USD "
-            "per 1M input/output tokens for every model the catalog listed."
+            "Rates are USD per 1M input/output tokens. 'catalog' rows come from "
+            "the run-time OpenRouter snapshot; 'fallback' rows are the effective "
+            "rates used for aliases the catalog does not publish "
+            "(e.g. openrouter/auto, ~typesafe/jev-latest)."
         )
         st.dataframe(rows, hide_index=True)
 
