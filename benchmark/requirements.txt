@@ -1,0 +1,10 @@
+# Benchmark runtime deps (benchmark/jevreleval).
+# Install the library itself from PyPI once released:
+#   pip install jev-relevance
+# or editable from a local checkout of github.com/saksham-malhotra-27/jev-relevance.
+rank-bm25>=0.2
+langchain-core>=1.0,<2
+langchain-openai>=0.3
+langchain-typesafe>=0.0.1a3,<1
+python-dotenv>=1.0
+requests>=2.31

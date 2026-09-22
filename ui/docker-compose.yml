@@ -1,0 +1,8 @@
+services:
+  dashboard:
+    build: .
+    image: ghcr.io/saksham-malhotra-27/jev-relevance-evals:local
+    ports:
+      - "8501:8501"
+    environment:
+      JEV_RESULTS_DIR: /app/sample_data

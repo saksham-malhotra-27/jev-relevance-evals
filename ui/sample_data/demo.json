@@ -1,0 +1,2291 @@
+{
+  "run": {
+    "tool": "jevreleval",
+    "version": "0.2.0",
+    "dataset": "demo",
+    "provider": "openrouter",
+    "threshold": 0.5,
+    "candidate_k": 20,
+    "scoring_mode": "per_chunk",
+    "query_count": 4,
+    "generated_at": "2026-09-22T14:16:22.579230+00:00",
+    "price_source": "openrouter-catalog"
+  },
+  "pricing": {
+    "xiaomi/mimo-v2.6-pro-ultraspeed": {
+      "input_usd_per_1m": 4.35e-12,
+      "output_usd_per_1m": 8.7e-12
+    },
+    "xiaomi/mimo-v2.6-flash": {
+      "input_usd_per_1m": 1.4e-13,
+      "output_usd_per_1m": 2.8e-13
+    },
+    "xiaomi/mimo-v2.6-pro": {
+      "input_usd_per_1m": 4.35e-13,
+      "output_usd_per_1m": 8.7e-13
+    },
+    "x-ai/grok-4.7": {
+      "input_usd_per_1m": 1.5999999999999998e-12,
+      "output_usd_per_1m": 4.8e-12
+    },
+    "prism-ml/ternary-bonsai-2-27b": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 5e-13
+    },
+    "z-ai/glm-5.3-flashx": {
+      "input_usd_per_1m": 3.7e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "unbiased/pareto": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "~deepseek/deepseek-pro-latest": {
+      "input_usd_per_1m": 5.7948e-13,
+      "output_usd_per_1m": 1.73844e-12
+    },
+    "~deepseek/deepseek-flash-latest": {
+      "input_usd_per_1m": 1.2e-13,
+      "output_usd_per_1m": 4.8e-13
+    },
+    "inference-net/schematron-v2-turbo": {
+      "input_usd_per_1m": 3e-14,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "inference-net/schematron-v2-small": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 2.3e-13
+    },
+    "~openai/gpt-astra-latest": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "~openai/gpt-sol-latest": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "~openai/gpt-terra-latest": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "~openai/gpt-luna-latest": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "sakana/fugu-ultra-v2": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 3e-11
+    },
+    "sakana/fugu-max": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "inclusionai/ling-3.0-flash-vl": {
+      "input_usd_per_1m": 6e-14,
+      "output_usd_per_1m": 1.8e-13
+    },
+    "inclusionai/ling-3.0-flash-vl:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "inception/mercury-2.5": {
+      "input_usd_per_1m": 4e-14,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "nex-agi/nex-n2.5-mini": {
+      "input_usd_per_1m": 2.4999999999999998e-14,
+      "output_usd_per_1m": 9.999999999999999e-14
+    },
+    "nex-agi/nex-n2.5-mini:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "nex-agi/nex-n2.5-pro": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 2.5e-13
+    },
+    "nex-agi/nex-n2.5-pro:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "openai/gpt-6-astra": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "openai/gpt-6-astra:batch": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "openai/gpt-6-astra-pro": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "openai/gpt-6-astra-pro:batch": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "qwen/qwen3.8-max-0902": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "meta/muse-spark-1.3-contributor": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "meta/muse-spark-1.3": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 4.25e-12
+    },
+    "google/gemini-3.8-flash": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 3.75e-12
+    },
+    "google/gemini-3.8-flash:batch": {
+      "input_usd_per_1m": 3.75e-13,
+      "output_usd_per_1m": 1.875e-12
+    },
+    "anthropic/claude-fable-5.1": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "anthropic/claude-fable-5.1:batch": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "ibm-granite/granite-4.2-8b": {
+      "input_usd_per_1m": 6e-14,
+      "output_usd_per_1m": 2.5e-13
+    },
+    "tencent/hy4-preview": {
+      "input_usd_per_1m": 8.34e-13,
+      "output_usd_per_1m": 2.5009999999999995e-12
+    },
+    "inclusionai/ling-3.0-flash-fin": {
+      "input_usd_per_1m": 6e-14,
+      "output_usd_per_1m": 1.8e-13
+    },
+    "inclusionai/ling-3.0-flash-fin:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "~z-ai/glm-flash-latest": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 2.5e-13
+    },
+    "qwen/qwen3.8-flash": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 4.7e-13
+    },
+    "z-ai/glm-5.3-flash": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 5e-13
+    },
+    "z-ai/glm-5.3-flash:batch": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 2.5e-13
+    },
+    "meta/muse-spark-1.2-contributor": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "deepseek/deepseek-v4-flash-vision-exp": {
+      "input_usd_per_1m": 2.2e-13,
+      "output_usd_per_1m": 6.6e-13
+    },
+    "deepseek/deepseek-v4-flash-vision-exp:batch": {
+      "input_usd_per_1m": 1.1e-13,
+      "output_usd_per_1m": 3.3e-13
+    },
+    "tencent/hy-mt2-1.8b": {
+      "input_usd_per_1m": 4.3999999999999996e-14,
+      "output_usd_per_1m": 1.77e-13
+    },
+    "tencent/hy-mt2-30b-a3b": {
+      "input_usd_per_1m": 7.4e-14,
+      "output_usd_per_1m": 2.9499999999999995e-13
+    },
+    "~z-ai/glm-latest": {
+      "input_usd_per_1m": 6.538e-13,
+      "output_usd_per_1m": 2.0547999999999997e-12
+    },
+    "tencent/hy-mt2-7b": {
+      "input_usd_per_1m": 7.4e-14,
+      "output_usd_per_1m": 2.9499999999999995e-13
+    },
+    "z-ai/glm-5.3": {
+      "input_usd_per_1m": 6.538e-13,
+      "output_usd_per_1m": 2.0547999999999997e-12
+    },
+    "z-ai/glm-5.3:batch": {
+      "input_usd_per_1m": 6.999999999999999e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "qwen/qwen3.8-27b": {
+      "input_usd_per_1m": 4.2e-13,
+      "output_usd_per_1m": 3e-12
+    },
+    "qwen/qwen3.8-27b:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "dots-studio/dots-3-note-preview:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "google/gemini-3.7-flash": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 3.75e-12
+    },
+    "google/gemini-3.7-flash:batch": {
+      "input_usd_per_1m": 3.75e-13,
+      "output_usd_per_1m": 1.875e-12
+    },
+    "bytedance-seed/seed-2-1-turbo": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "qwen/qwen3.8-2.4t-a95b": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "bytedance-seed/seed-2.0-code": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 3e-12
+    },
+    "deepseek/deepseek-v4-pro-0813": {
+      "input_usd_per_1m": 6.6e-13,
+      "output_usd_per_1m": 1.98e-12
+    },
+    "deepseek/deepseek-v4-pro-0813:batch": {
+      "input_usd_per_1m": 6.6e-13,
+      "output_usd_per_1m": 1.98e-12
+    },
+    "x-ai/grok-4.6": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "liquid/lfm-2.5-2.6b:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "nvidia/nemotron-3.5-lightning": {
+      "input_usd_per_1m": 7e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "nvidia/nemotron-3.5-lightning:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "sakana/sakana-namazu": {
+      "input_usd_per_1m": 9.5e-13,
+      "output_usd_per_1m": 4e-12
+    },
+    "upstage/solar-pro4": {
+      "input_usd_per_1m": 9e-14,
+      "output_usd_per_1m": 3.6e-13
+    },
+    "meta/muse-glimmer-30b": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "meta/muse-glimmer-30b:batch": {
+      "input_usd_per_1m": 1.7499999999999999e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "meta/muse-spark-1.2": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 4.25e-12
+    },
+    "~deepseek/deepseek-v4-flash-latest": {
+      "input_usd_per_1m": 3e-14,
+      "output_usd_per_1m": 1e-12
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "input_usd_per_1m": 4e-14,
+      "output_usd_per_1m": 6.4e-13
+    },
+    "deepseek/deepseek-v4-flash-0731:batch": {
+      "input_usd_per_1m": 1.1e-13,
+      "output_usd_per_1m": 3.3e-13
+    },
+    "thinkingmachines/inkling-small": {
+      "input_usd_per_1m": 4.4999999999999995e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "thinkingmachines/inkling-small:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "qwen/qwen3.7-flash": {
+      "input_usd_per_1m": 3e-14,
+      "output_usd_per_1m": 1.3e-13
+    },
+    "anthropic/claude-opus-5": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "anthropic/claude-opus-5:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "inclusionai/ling-3.0-flash": {
+      "input_usd_per_1m": 2.1e-14,
+      "output_usd_per_1m": 6.3e-14
+    },
+    "poolside/laguna-s-2.1": {
+      "input_usd_per_1m": 9e-14,
+      "output_usd_per_1m": 1.8e-13
+    },
+    "poolside/laguna-s-2.1:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "google/gemini-3.6-flash": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 3.75e-12
+    },
+    "google/gemini-3.6-flash:batch": {
+      "input_usd_per_1m": 3.75e-13,
+      "output_usd_per_1m": 1.875e-12
+    },
+    "google/gemini-3.5-flash-lite": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "google/gemini-3.5-flash-lite:batch": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "meituan/longcat-2.0": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "thinkingmachines/inkling": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 4.05e-12
+    },
+    "thinkingmachines/inkling:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "moonshotai/kimi-k3": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "meta/muse-spark-1.1": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 4.25e-12
+    },
+    "kwaipilot/kat-coder-pro-v2.5": {
+      "input_usd_per_1m": 7.4e-13,
+      "output_usd_per_1m": 2.96e-12
+    },
+    "openai/gpt-5.6-luna-pro": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "openai/gpt-5.6-luna-pro:batch": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/gpt-5.6-luna": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "openai/gpt-5.6-luna:batch": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/gpt-5.6-terra-pro": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "openai/gpt-5.6-terra-pro:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "openai/gpt-5.6-terra": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "openai/gpt-5.6-terra:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "openai/gpt-5.6-sol-pro": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-5.6-sol-pro:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "openai/gpt-5.6-sol": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-5.6-sol:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "x-ai/grok-4.5": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "~x-ai/grok-latest": {
+      "input_usd_per_1m": 1.5999999999999998e-12,
+      "output_usd_per_1m": 4.8e-12
+    },
+    "aion-labs/aion-3.0-mini": {
+      "input_usd_per_1m": 6.999999999999999e-13,
+      "output_usd_per_1m": 1.3999999999999999e-12
+    },
+    "aion-labs/aion-3.0": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "tencent/hy3": {
+      "input_usd_per_1m": 1.32e-13,
+      "output_usd_per_1m": 5.28e-13
+    },
+    "poolside/laguna-xs-2.1": {
+      "input_usd_per_1m": 6e-14,
+      "output_usd_per_1m": 1.2e-13
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "anthropic/claude-sonnet-5": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "anthropic/claude-sonnet-5:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "google/gemini-3.1-flash-lite-image": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "sakana/fugu-ultra": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 3e-11
+    },
+    "google/gemini-3.1-flash-image": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 3e-12
+    },
+    "google/gemini-3-pro-image": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "cohere/north-mini-code:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "z-ai/glm-5.2": {
+      "input_usd_per_1m": 6.496e-13,
+      "output_usd_per_1m": 2.0416e-12
+    },
+    "z-ai/glm-5.2:batch": {
+      "input_usd_per_1m": 6.999999999999999e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "z-ai/glm-5.2:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "moonshotai/kimi-k2.7-code": {
+      "input_usd_per_1m": 7.062e-13,
+      "output_usd_per_1m": 3.3e-12
+    },
+    "~anthropic/claude-fable-latest": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "anthropic/claude-fable-5": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 5e-11
+    },
+    "anthropic/claude-fable-5:batch": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "nvidia/nemotron-3.5-content-safety": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "nvidia/nemotron-3.5-content-safety:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 2.4e-12
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "qwen/qwen3.7-plus": {
+      "input_usd_per_1m": 3.2e-13,
+      "output_usd_per_1m": 1.28e-12
+    },
+    "minimax/minimax-m3": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "stepfun/step-3.7-flash": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.15e-12
+    },
+    "anthropic/claude-opus-4.8": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "anthropic/claude-opus-4.8:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "qwen/qwen3.7-max": {
+      "input_usd_per_1m": 1.475e-12,
+      "output_usd_per_1m": 4.4249999999999994e-12
+    },
+    "x-ai/grok-build-0.1": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 2e-12
+    },
+    "google/gemini-3.5-flash": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 9e-12
+    },
+    "google/gemini-3.5-flash:batch": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 4.5e-12
+    },
+    "perceptron/perceptron-mk1": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "google/gemini-3.1-flash-lite": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "google/gemini-3.1-flash-lite:batch": {
+      "input_usd_per_1m": 1.25e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "openai/gpt-chat-latest": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 3e-11
+    },
+    "x-ai/grok-4.3": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "x-ai/grok-4.3:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 2e-12
+    },
+    "mistralai/mistral-medium-3-5": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "mistralai/mistral-medium-3-5:batch": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 3.75e-12
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "~anthropic/claude-haiku-latest": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "~openai/gpt-mini-latest": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 4.5e-12
+    },
+    "~google/gemini-pro-latest": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "~moonshotai/kimi-latest": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "~google/gemini-flash-latest": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 3.75e-12
+    },
+    "~anthropic/claude-sonnet-latest": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "qwen/qwen3.5-plus-20260420": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.7999999999999998e-12
+    },
+    "qwen/qwen3.6-flash": {
+      "input_usd_per_1m": 1.875e-13,
+      "output_usd_per_1m": 1.125e-12
+    },
+    "qwen/qwen3.6-35b-a3b": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "qwen/qwen3.6-max-preview": {
+      "input_usd_per_1m": 1.027e-12,
+      "output_usd_per_1m": 6.161999999999999e-12
+    },
+    "qwen/qwen3.6-27b": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "openai/gpt-5.5-pro": {
+      "input_usd_per_1m": 3e-11,
+      "output_usd_per_1m": 1.8e-10
+    },
+    "openai/gpt-5.5-pro:batch": {
+      "input_usd_per_1m": 1.5e-11,
+      "output_usd_per_1m": 9e-11
+    },
+    "openai/gpt-5.5": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 3e-11
+    },
+    "openai/gpt-5.5:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "deepseek/deepseek-v4-pro": {
+      "input_usd_per_1m": 9.481259999999998e-13,
+      "output_usd_per_1m": 1.8962519999999997e-12
+    },
+    "deepseek/deepseek-v4-flash": {
+      "input_usd_per_1m": 4.9e-14,
+      "output_usd_per_1m": 9.8e-14
+    },
+    "tencent/hy3-preview": {
+      "input_usd_per_1m": 1.8e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "xiaomi/mimo-v2.5-pro": {
+      "input_usd_per_1m": 4.35e-13,
+      "output_usd_per_1m": 8.7e-13
+    },
+    "xiaomi/mimo-v2.5": {
+      "input_usd_per_1m": 1.4e-13,
+      "output_usd_per_1m": 2.8e-13
+    },
+    "openai/gpt-5.4-image-2": {
+      "input_usd_per_1m": 8e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "~anthropic/claude-opus-latest": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "moonshotai/kimi-k2.6": {
+      "input_usd_per_1m": 9.5e-13,
+      "output_usd_per_1m": 4e-12
+    },
+    "anthropic/claude-opus-4.7": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "anthropic/claude-opus-4.7:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "z-ai/glm-5.1": {
+      "input_usd_per_1m": 9.66e-13,
+      "output_usd_per_1m": 3.0359999999999996e-12
+    },
+    "google/gemma-4-26b-a4b-it": {
+      "input_usd_per_1m": 9e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "google/gemma-4-26b-a4b-it:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "google/gemma-4-31b-it": {
+      "input_usd_per_1m": 9e-14,
+      "output_usd_per_1m": 3.3999999999999996e-13
+    },
+    "google/gemma-4-31b-it:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "qwen/qwen3.6-plus": {
+      "input_usd_per_1m": 3.25e-13,
+      "output_usd_per_1m": 1.95e-12
+    },
+    "z-ai/glm-5v-turbo": {
+      "input_usd_per_1m": 1.2e-12,
+      "output_usd_per_1m": 4e-12
+    },
+    "arcee-ai/trinity-large-thinking": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 7.999999999999999e-13
+    },
+    "x-ai/grok-4.20-multi-agent": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "x-ai/grok-4.20": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "google/lyria-3-pro-preview": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "google/lyria-3-clip-preview": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "rekaai/reka-edge": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 9.999999999999999e-14
+    },
+    "minimax/minimax-m2.7": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "openai/gpt-5.4-nano": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "openai/gpt-5.4-nano:batch": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 6.250000000000001e-13
+    },
+    "openai/gpt-5.4-mini": {
+      "input_usd_per_1m": 7.5e-13,
+      "output_usd_per_1m": 4.5e-12
+    },
+    "openai/gpt-5.4-mini:batch": {
+      "input_usd_per_1m": 3.75e-13,
+      "output_usd_per_1m": 2.25e-12
+    },
+    "mistralai/mistral-small-2603": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "mistralai/mistral-small-2603:batch": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "z-ai/glm-5-turbo": {
+      "input_usd_per_1m": 1.2e-12,
+      "output_usd_per_1m": 4e-12
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+      "input_usd_per_1m": 8e-14,
+      "output_usd_per_1m": 4.4999999999999995e-13
+    },
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "bytedance-seed/seed-2.0-lite": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "qwen/qwen3.5-9b": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "openai/gpt-5.4-pro": {
+      "input_usd_per_1m": 3e-11,
+      "output_usd_per_1m": 1.8e-10
+    },
+    "openai/gpt-5.4-pro:batch": {
+      "input_usd_per_1m": 1.5e-11,
+      "output_usd_per_1m": 9e-11
+    },
+    "openai/gpt-5.4": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "openai/gpt-5.4:batch": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "inception/mercury-2": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "google/gemini-3.1-flash-lite-preview": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "bytedance-seed/seed-2.0-mini": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "google/gemini-3.1-flash-image-preview": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 3e-12
+    },
+    "qwen/qwen3.5-35b-a3b": {
+      "input_usd_per_1m": 3.1250000000000003e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "qwen/qwen3.5-27b": {
+      "input_usd_per_1m": 1.95e-13,
+      "output_usd_per_1m": 1.56e-12
+    },
+    "qwen/qwen3.5-122b-a10b": {
+      "input_usd_per_1m": 2.6e-13,
+      "output_usd_per_1m": 2.08e-12
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "input_usd_per_1m": 6.5e-14,
+      "output_usd_per_1m": 2.6e-13
+    },
+    "google/gemini-3.1-pro-preview-customtools": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "openai/gpt-5.3-codex": {
+      "input_usd_per_1m": 1.7499999999999998e-12,
+      "output_usd_per_1m": 1.3999999999999999e-11
+    },
+    "aion-labs/aion-2.0": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 1.5999999999999998e-12
+    },
+    "google/gemini-3.1-pro-preview": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "google/gemini-3.1-pro-preview:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "anthropic/claude-sonnet-4.6:batch": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "qwen/qwen3.5-plus-02-15": {
+      "input_usd_per_1m": 2.6e-13,
+      "output_usd_per_1m": 1.56e-12
+    },
+    "qwen/qwen3.5-397b-a17b": {
+      "input_usd_per_1m": 5.5e-13,
+      "output_usd_per_1m": 3.4999999999999996e-12
+    },
+    "minimax/minimax-m2.5": {
+      "input_usd_per_1m": 2.7e-13,
+      "output_usd_per_1m": 1.08e-12
+    },
+    "z-ai/glm-5": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 1.92e-12
+    },
+    "qwen/qwen3-max-thinking": {
+      "input_usd_per_1m": 7.8e-13,
+      "output_usd_per_1m": 3.9e-12
+    },
+    "anthropic/claude-opus-4.6": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "anthropic/claude-opus-4.6:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "qwen/qwen3-coder-next": {
+      "input_usd_per_1m": 1.2e-13,
+      "output_usd_per_1m": 7.999999999999999e-13
+    },
+    "openrouter/free": {
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0
+    },
+    "stepfun/step-3.5-flash": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "moonshotai/kimi-k2.5": {
+      "input_usd_per_1m": 4.4999999999999995e-13,
+      "output_usd_per_1m": 2.25e-12
+    },
+    "upstage/solar-pro-3": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "minimax/minimax-m2-her": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "writer/palmyra-x5": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 6e-12
+    },
+    "openai/gpt-audio": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-audio-mini": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 2.4e-12
+    },
+    "z-ai/glm-4.7-flash": {
+      "input_usd_per_1m": 6.050000000000001e-14,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "openai/gpt-5.2-codex": {
+      "input_usd_per_1m": 1.7499999999999998e-12,
+      "output_usd_per_1m": 1.3999999999999999e-11
+    },
+    "bytedance-seed/seed-1.6-flash": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "bytedance-seed/seed-1.6": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "minimax/minimax-m2.1": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "z-ai/glm-4.7": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 1.7499999999999998e-12
+    },
+    "google/gemini-3-flash-preview": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 3e-12
+    },
+    "google/gemini-3-flash-preview:batch": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "nvidia/nemotron-3-nano-30b-a3b": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "openai/gpt-5.2-chat": {
+      "input_usd_per_1m": 1.7499999999999998e-12,
+      "output_usd_per_1m": 1.3999999999999999e-11
+    },
+    "openai/gpt-5.2-pro": {
+      "input_usd_per_1m": 2.1e-11,
+      "output_usd_per_1m": 1.68e-10
+    },
+    "openai/gpt-5.2-pro:batch": {
+      "input_usd_per_1m": 1.05e-11,
+      "output_usd_per_1m": 8.4e-11
+    },
+    "openai/gpt-5.2": {
+      "input_usd_per_1m": 1.7499999999999998e-12,
+      "output_usd_per_1m": 1.3999999999999999e-11
+    },
+    "openai/gpt-5.2:batch": {
+      "input_usd_per_1m": 8.749999999999999e-13,
+      "output_usd_per_1m": 6.999999999999999e-12
+    },
+    "mistralai/devstral-2512": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "relace/relace-search": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 3e-12
+    },
+    "z-ai/glm-4.6v": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 8.999999999999999e-13
+    },
+    "openai/gpt-5.1-codex-max": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "amazon/nova-2-lite-v1": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "mistralai/ministral-14b-2512": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "mistralai/ministral-8b-2512": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "mistralai/ministral-8b-2512:batch": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 7.5e-14
+    },
+    "mistralai/ministral-3b-2512": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 9.999999999999999e-14
+    },
+    "mistralai/mistral-large-2512:batch": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "deepseek/deepseek-v3.2": {
+      "input_usd_per_1m": 2.6899999999999996e-13,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "anthropic/claude-opus-4.5": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 2.5e-11
+    },
+    "anthropic/claude-opus-4.5:batch": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "google/gemini-3-pro-image-preview": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 1.2e-11
+    },
+    "openai/gpt-5.1": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-5.1:batch": {
+      "input_usd_per_1m": 6.250000000000001e-13,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "openai/gpt-5.1-codex": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-5.1-codex-mini": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "amazon/nova-premier-v1": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.25e-11
+    },
+    "perplexity/sonar-pro-search": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "mistralai/voxtral-small-24b-2507": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "openai/gpt-oss-safeguard-20b": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "minimax/minimax-m2": {
+      "input_usd_per_1m": 2.5499999999999997e-13,
+      "output_usd_per_1m": 1.0199999999999999e-12
+    },
+    "qwen/qwen3-vl-32b-instruct": {
+      "input_usd_per_1m": 1.04e-13,
+      "output_usd_per_1m": 4.16e-13
+    },
+    "ibm-granite/granite-4.0-h-micro": {
+      "input_usd_per_1m": 1.7e-14,
+      "output_usd_per_1m": 1.1199999999999999e-13
+    },
+    "openai/gpt-5-image-mini": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 2e-12
+    },
+    "anthropic/claude-haiku-4.5": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "anthropic/claude-haiku-4.5:batch": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "qwen/qwen3-vl-8b-thinking": {
+      "input_usd_per_1m": 1.8e-13,
+      "output_usd_per_1m": 2.0999999999999995e-12
+    },
+    "qwen/qwen3-vl-8b-instruct": {
+      "input_usd_per_1m": 1.17e-13,
+      "output_usd_per_1m": 4.55e-13
+    },
+    "openai/gpt-5-image": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "google/gemini-2.5-flash-image": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "qwen/qwen3-vl-30b-a3b-thinking": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 2.4e-12
+    },
+    "qwen/qwen3-vl-30b-a3b-instruct": {
+      "input_usd_per_1m": 1.3e-13,
+      "output_usd_per_1m": 5.2e-13
+    },
+    "openai/gpt-5-pro": {
+      "input_usd_per_1m": 1.5e-11,
+      "output_usd_per_1m": 1.2e-10
+    },
+    "openai/gpt-5-pro:batch": {
+      "input_usd_per_1m": 7.5e-12,
+      "output_usd_per_1m": 6e-11
+    },
+    "z-ai/glm-4.6": {
+      "input_usd_per_1m": 4.3e-13,
+      "output_usd_per_1m": 1.7499999999999998e-12
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "anthropic/claude-sonnet-4.5:batch": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 7.5e-12
+    },
+    "deepseek/deepseek-v3.2-exp": {
+      "input_usd_per_1m": 2.7e-13,
+      "output_usd_per_1m": 4.0999999999999997e-13
+    },
+    "thedrummer/cydonia-24b-v4.1": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 5e-13
+    },
+    "relace/relace-apply-3": {
+      "input_usd_per_1m": 8.5e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "qwen/qwen3-vl-235b-a22b-thinking": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 4e-12
+    },
+    "qwen/qwen3-vl-235b-a22b-instruct": {
+      "input_usd_per_1m": 2.1e-13,
+      "output_usd_per_1m": 1.9e-12
+    },
+    "qwen/qwen3-max": {
+      "input_usd_per_1m": 7.8e-13,
+      "output_usd_per_1m": 3.9e-12
+    },
+    "qwen/qwen3-coder-plus": {
+      "input_usd_per_1m": 6.5e-13,
+      "output_usd_per_1m": 3.2499999999999997e-12
+    },
+    "deepseek/deepseek-v3.1-terminus": {
+      "input_usd_per_1m": 2.7e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "qwen/qwen3-coder-flash": {
+      "input_usd_per_1m": 1.95e-13,
+      "output_usd_per_1m": 9.75e-13
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "qwen/qwen3-next-80b-a3b-instruct": {
+      "input_usd_per_1m": 9e-14,
+      "output_usd_per_1m": 1.1e-12
+    },
+    "qwen/qwen-plus-2025-07-28": {
+      "input_usd_per_1m": 2.6e-13,
+      "output_usd_per_1m": 7.8e-13
+    },
+    "moonshotai/kimi-k2-0905": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "qwen/qwen3-30b-a3b-thinking-2507": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 2.4e-12
+    },
+    "nousresearch/hermes-4-405b": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 3e-12
+    },
+    "deepseek/deepseek-chat-v3.1": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 9.5e-13
+    },
+    "mistralai/mistral-medium-3.1": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "mistralai/mistral-medium-3.1:batch": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "z-ai/glm-4.5v": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 1.7999999999999998e-12
+    },
+    "openai/gpt-5": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-5:batch": {
+      "input_usd_per_1m": 6.250000000000001e-13,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "openai/gpt-5-mini": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "openai/gpt-5-mini:batch": {
+      "input_usd_per_1m": 1.25e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "openai/gpt-5-nano": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "openai/gpt-5-nano:batch": {
+      "input_usd_per_1m": 2.4999999999999998e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "openai/gpt-oss-120b": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/gpt-oss-20b": {
+      "input_usd_per_1m": 3e-14,
+      "output_usd_per_1m": 1.3e-13
+    },
+    "anthropic/claude-opus-4.1": {
+      "input_usd_per_1m": 1.5e-11,
+      "output_usd_per_1m": 7.499999999999999e-11
+    },
+    "anthropic/claude-opus-4.1:batch": {
+      "input_usd_per_1m": 7.5e-12,
+      "output_usd_per_1m": 3.7499999999999993e-11
+    },
+    "mistralai/codestral-2508": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 8.999999999999999e-13
+    },
+    "mistralai/codestral-2508:batch": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 4.4999999999999995e-13
+    },
+    "qwen/qwen3-coder-30b-a3b-instruct": {
+      "input_usd_per_1m": 7e-14,
+      "output_usd_per_1m": 2.8e-13
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "input_usd_per_1m": 4.8149999999999996e-14,
+      "output_usd_per_1m": 1.9305e-13
+    },
+    "z-ai/glm-4.5": {
+      "input_usd_per_1m": 6e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "z-ai/glm-4.5-air": {
+      "input_usd_per_1m": 1.3e-13,
+      "output_usd_per_1m": 8.5e-13
+    },
+    "qwen/qwen3-235b-a22b-thinking-2507": {
+      "input_usd_per_1m": 2.3e-13,
+      "output_usd_per_1m": 2.3e-12
+    },
+    "qwen/qwen3-coder": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "bytedance/ui-tars-1.5-7b": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "google/gemini-2.5-flash-lite": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "google/gemini-2.5-flash-lite:batch": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "input_usd_per_1m": 8.749999999999999e-14,
+      "output_usd_per_1m": 3.4999999999999997e-13
+    },
+    "moonshotai/kimi-k2": {
+      "input_usd_per_1m": 5.7e-13,
+      "output_usd_per_1m": 2.3e-12
+    },
+    "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 8.999999999999999e-13
+    },
+    "tencent/hunyuan-a13b-instruct": {
+      "input_usd_per_1m": 1.4e-13,
+      "output_usd_per_1m": 5.7e-13
+    },
+    "morph/morph-v3-large": {
+      "input_usd_per_1m": 8.999999999999999e-13,
+      "output_usd_per_1m": 1.9e-12
+    },
+    "morph/morph-v3-fast": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 1.2e-12
+    },
+    "baidu/ernie-4.5-vl-424b-a47b": {
+      "input_usd_per_1m": 4.2e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "mistralai/mistral-small-3.2-24b-instruct": {
+      "input_usd_per_1m": 9.375e-14,
+      "output_usd_per_1m": 2.5e-13
+    },
+    "minimax/minimax-m1": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "google/gemini-2.5-flash": {
+      "input_usd_per_1m": 3e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "google/gemini-2.5-flash:batch": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "google/gemini-2.5-pro": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "google/gemini-2.5-pro:batch": {
+      "input_usd_per_1m": 6.250000000000001e-13,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "openai/o3-pro": {
+      "input_usd_per_1m": 2.0000000000000002e-11,
+      "output_usd_per_1m": 8.000000000000001e-11
+    },
+    "google/gemini-2.5-pro-preview": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "deepseek/deepseek-r1-0528": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 2.15e-12
+    },
+    "anthropic/claude-sonnet-4": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "mistralai/mistral-medium-3": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 2e-12
+    },
+    "meta-llama/llama-guard-4-12b": {
+      "input_usd_per_1m": 1.8e-13,
+      "output_usd_per_1m": 1.8e-13
+    },
+    "qwen/qwen3-30b-a3b": {
+      "input_usd_per_1m": 1.2e-13,
+      "output_usd_per_1m": 5e-13
+    },
+    "qwen/qwen3-8b": {
+      "input_usd_per_1m": 1.17e-13,
+      "output_usd_per_1m": 4.55e-13
+    },
+    "qwen/qwen3-14b": {
+      "input_usd_per_1m": 1.2e-13,
+      "output_usd_per_1m": 2.4e-13
+    },
+    "qwen/qwen3-32b": {
+      "input_usd_per_1m": 8e-14,
+      "output_usd_per_1m": 2.8e-13
+    },
+    "qwen/qwen3-235b-a22b": {
+      "input_usd_per_1m": 4.55e-13,
+      "output_usd_per_1m": 1.82e-12
+    },
+    "openai/o4-mini-high": {
+      "input_usd_per_1m": 1.1e-12,
+      "output_usd_per_1m": 4.4e-12
+    },
+    "openai/o3": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 8e-12
+    },
+    "openai/o3:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 4e-12
+    },
+    "openai/o4-mini": {
+      "input_usd_per_1m": 1.1e-12,
+      "output_usd_per_1m": 4.4e-12
+    },
+    "openai/o4-mini:batch": {
+      "input_usd_per_1m": 5.5e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "openai/gpt-4.1": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 8e-12
+    },
+    "openai/gpt-4.1:batch": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 4e-12
+    },
+    "openai/gpt-4.1-mini": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 1.5999999999999998e-12
+    },
+    "openai/gpt-4.1-mini:batch": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 7.999999999999999e-13
+    },
+    "openai/gpt-4.1-nano": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "openai/gpt-4.1-nano:batch": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "meta-llama/llama-4-maverick": {
+      "input_usd_per_1m": 1.875e-13,
+      "output_usd_per_1m": 6.525e-13
+    },
+    "meta-llama/llama-4-scout": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "deepseek/deepseek-chat-v3-0324": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "openai/o1-pro": {
+      "input_usd_per_1m": 1.4999999999999997e-10,
+      "output_usd_per_1m": 5.999999999999999e-10
+    },
+    "mistralai/mistral-small-3.1-24b-instruct": {
+      "input_usd_per_1m": 3.5099999999999997e-13,
+      "output_usd_per_1m": 5.55e-13
+    },
+    "google/gemma-3-4b-it": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 9.999999999999999e-14
+    },
+    "google/gemma-3-12b-it": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "cohere/command-a": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "rekaai/reka-flash-3": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "google/gemma-3-27b-it": {
+      "input_usd_per_1m": 8e-14,
+      "output_usd_per_1m": 4.4999999999999995e-13
+    },
+    "thedrummer/skyfall-36b-v2": {
+      "input_usd_per_1m": 5.5e-13,
+      "output_usd_per_1m": 7.999999999999999e-13
+    },
+    "perplexity/sonar-reasoning-pro": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 8e-12
+    },
+    "perplexity/sonar-pro": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "perplexity/sonar-deep-research": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 8e-12
+    },
+    "mistralai/mistral-saba": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/o3-mini-high": {
+      "input_usd_per_1m": 1.1e-12,
+      "output_usd_per_1m": 4.4e-12
+    },
+    "aion-labs/aion-rp-llama-3.1-8b": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 1.5999999999999998e-12
+    },
+    "qwen/qwen2.5-vl-72b-instruct": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "qwen/qwen-plus": {
+      "input_usd_per_1m": 2.6e-13,
+      "output_usd_per_1m": 7.8e-13
+    },
+    "openai/o3-mini": {
+      "input_usd_per_1m": 1.1e-12,
+      "output_usd_per_1m": 4.4e-12
+    },
+    "openai/o3-mini:batch": {
+      "input_usd_per_1m": 5.5e-13,
+      "output_usd_per_1m": 2.2e-12
+    },
+    "mistralai/mistral-small-24b-instruct-2501": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 8e-14
+    },
+    "perplexity/sonar": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 1e-12
+    },
+    "deepseek/deepseek-r1-distill-llama-70b": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 7.999999999999999e-13
+    },
+    "deepseek/deepseek-r1": {
+      "input_usd_per_1m": 6.999999999999999e-13,
+      "output_usd_per_1m": 2.5000000000000003e-12
+    },
+    "minimax/minimax-01": {
+      "input_usd_per_1m": 1.9999999999999998e-13,
+      "output_usd_per_1m": 1.1e-12
+    },
+    "microsoft/phi-4": {
+      "input_usd_per_1m": 7e-14,
+      "output_usd_per_1m": 1.4e-13
+    },
+    "deepseek/deepseek-chat": {
+      "input_usd_per_1m": 3.2e-13,
+      "output_usd_per_1m": 8.899999999999999e-13
+    },
+    "sao10k/l3.3-euryale-70b": {
+      "input_usd_per_1m": 6.5e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "openai/o1": {
+      "input_usd_per_1m": 1.5e-11,
+      "output_usd_per_1m": 6e-11
+    },
+    "cohere/command-r7b-12-2024": {
+      "input_usd_per_1m": 3.75e-14,
+      "output_usd_per_1m": 1.5e-13
+    },
+    "meta-llama/llama-3.3-70b-instruct": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 3.2e-13
+    },
+    "amazon/nova-lite-v1": {
+      "input_usd_per_1m": 6e-14,
+      "output_usd_per_1m": 2.4e-13
+    },
+    "amazon/nova-micro-v1": {
+      "input_usd_per_1m": 3.5e-14,
+      "output_usd_per_1m": 1.4e-13
+    },
+    "amazon/nova-pro-v1": {
+      "input_usd_per_1m": 7.999999999999999e-13,
+      "output_usd_per_1m": 3.1999999999999997e-12
+    },
+    "openai/gpt-4o-2024-11-20": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "mistralai/mistral-large-2407": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "qwen/qwen-2.5-coder-32b-instruct": {
+      "input_usd_per_1m": 6.6e-13,
+      "output_usd_per_1m": 1e-12
+    },
+    "thedrummer/unslopnemo-12b": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "anthracite-org/magnum-v4-72b": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "qwen/qwen-2.5-7b-instruct": {
+      "input_usd_per_1m": 9.999999999999999e-14,
+      "output_usd_per_1m": 1.9999999999999998e-13
+    },
+    "meta-llama/llama-3.2-1b-instruct": {
+      "input_usd_per_1m": 2.7e-14,
+      "output_usd_per_1m": 2.01e-13
+    },
+    "meta-llama/llama-3.2-3b-instruct": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 3.3e-13
+    },
+    "qwen/qwen-2.5-72b-instruct": {
+      "input_usd_per_1m": 3.6e-13,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "cohere/command-r-08-2024": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "cohere/command-r-plus-08-2024": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "sao10k/l3.1-euryale-70b": {
+      "input_usd_per_1m": 8.5e-13,
+      "output_usd_per_1m": 8.5e-13
+    },
+    "nousresearch/hermes-3-llama-3.1-70b": {
+      "input_usd_per_1m": 6.999999999999999e-13,
+      "output_usd_per_1m": 6.999999999999999e-13
+    },
+    "nousresearch/hermes-3-llama-3.1-405b": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 1e-12
+    },
+    "sao10k/l3-lunaris-8b": {
+      "input_usd_per_1m": 4e-14,
+      "output_usd_per_1m": 4.9999999999999995e-14
+    },
+    "openai/gpt-4o-2024-08-06": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "meta-llama/llama-3.1-70b-instruct": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 3.9999999999999996e-13
+    },
+    "meta-llama/llama-3.1-8b-instruct": {
+      "input_usd_per_1m": 4.9999999999999995e-14,
+      "output_usd_per_1m": 8e-14
+    },
+    "mistralai/mistral-nemo": {
+      "input_usd_per_1m": 1.9e-14,
+      "output_usd_per_1m": 3e-14
+    },
+    "openai/gpt-4o-mini": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/gpt-4o-mini-2024-07-18": {
+      "input_usd_per_1m": 1.5e-13,
+      "output_usd_per_1m": 6e-13
+    },
+    "openai/gpt-4o-mini:batch": {
+      "input_usd_per_1m": 7.5e-14,
+      "output_usd_per_1m": 3e-13
+    },
+    "google/gemma-2-27b-it": {
+      "input_usd_per_1m": 6.5e-13,
+      "output_usd_per_1m": 6.5e-13
+    },
+    "openai/gpt-4o": {
+      "input_usd_per_1m": 2.5000000000000003e-12,
+      "output_usd_per_1m": 1.0000000000000001e-11
+    },
+    "openai/gpt-4o-2024-05-13": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "openai/gpt-4o:batch": {
+      "input_usd_per_1m": 1.2500000000000001e-12,
+      "output_usd_per_1m": 5.0000000000000005e-12
+    },
+    "mistralai/mixtral-8x22b-instruct": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "microsoft/wizardlm-2-8x22b": {
+      "input_usd_per_1m": 6.2e-13,
+      "output_usd_per_1m": 6.2e-13
+    },
+    "openai/gpt-4-turbo": {
+      "input_usd_per_1m": 1.0000000000000001e-11,
+      "output_usd_per_1m": 3e-11
+    },
+    "openai/gpt-4-turbo:batch": {
+      "input_usd_per_1m": 5.0000000000000005e-12,
+      "output_usd_per_1m": 1.5e-11
+    },
+    "anthropic/claude-3-haiku": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 1.2500000000000001e-12
+    },
+    "mistralai/mistral-large": {
+      "input_usd_per_1m": 2e-12,
+      "output_usd_per_1m": 6e-12
+    },
+    "openai/gpt-3.5-turbo-0613": {
+      "input_usd_per_1m": 1e-12,
+      "output_usd_per_1m": 2e-12
+    },
+    "openai/gpt-3.5-turbo-instruct": {
+      "input_usd_per_1m": 1.5e-12,
+      "output_usd_per_1m": 2e-12
+    },
+    "openai/gpt-3.5-turbo-16k": {
+      "input_usd_per_1m": 3e-12,
+      "output_usd_per_1m": 4e-12
+    },
+    "mancer/weaver": {
+      "input_usd_per_1m": 3.9999999999999996e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "undi95/remm-slerp-l2-13b": {
+      "input_usd_per_1m": 3.4999999999999997e-13,
+      "output_usd_per_1m": 6.5e-13
+    },
+    "gryphe/mythomax-l2-13b": {
+      "input_usd_per_1m": 8e-14,
+      "output_usd_per_1m": 1.1e-13
+    },
+    "openai/gpt-3.5-turbo": {
+      "input_usd_per_1m": 5e-13,
+      "output_usd_per_1m": 1.5e-12
+    },
+    "openai/gpt-3.5-turbo:batch": {
+      "input_usd_per_1m": 2.5e-13,
+      "output_usd_per_1m": 7.5e-13
+    },
+    "openai/gpt-4": {
+      "input_usd_per_1m": 3e-11,
+      "output_usd_per_1m": 6e-11
+    }
+  },
+  "aggregates": {
+    "baseline": {
+      "hit_rate_at_k_mean": 1.0,
+      "hit_rate_at_k_p50": 1.0,
+      "hit_rate_at_k_p95": 1.0,
+      "mrr_mean": 0.8333333333333333,
+      "mrr_p50": 1.0,
+      "mrr_p95": 1.0,
+      "ndcg_at_k_mean": 0.8926604297388301,
+      "ndcg_at_k_p50": 1.0,
+      "ndcg_at_k_p95": 1.0,
+      "precision_at_k_mean": 0.25,
+      "precision_at_k_p50": 0.2,
+      "precision_at_k_p95": 0.4,
+      "recall_at_k_mean": 1.0,
+      "recall_at_k_p50": 1.0,
+      "recall_at_k_p95": 1.0
+    },
+    "jev": {
+      "hit_rate_at_k_mean": 1.0,
+      "hit_rate_at_k_p50": 1.0,
+      "hit_rate_at_k_p95": 1.0,
+      "mrr_mean": 1.0,
+      "mrr_p50": 1.0,
+      "mrr_p95": 1.0,
+      "ndcg_at_k_mean": 0.9032867981913646,
+      "ndcg_at_k_p50": 1.0,
+      "ndcg_at_k_p95": 1.0,
+      "precision_at_k_mean": 1.0,
+      "precision_at_k_p50": 1.0,
+      "precision_at_k_p95": 1.0,
+      "recall_at_k_mean": 0.875,
+      "recall_at_k_p50": 1.0,
+      "recall_at_k_p95": 1.0
+    },
+    "llm_judge": {
+      "hit_rate_at_k_mean": 1.0,
+      "hit_rate_at_k_p50": 1.0,
+      "hit_rate_at_k_p95": 1.0,
+      "mrr_mean": 1.0,
+      "mrr_p50": 1.0,
+      "mrr_p95": 1.0,
+      "ndcg_at_k_mean": 0.9032867981913646,
+      "ndcg_at_k_p50": 1.0,
+      "ndcg_at_k_p95": 1.0,
+      "precision_at_k_mean": 1.0,
+      "precision_at_k_p50": 1.0,
+      "precision_at_k_p95": 1.0,
+      "recall_at_k_mean": 0.875,
+      "recall_at_k_p50": 1.0,
+      "recall_at_k_p95": 1.0
+    },
+    "recall_ceiling": {
+      "hit_rate_at_k_mean": 1.0,
+      "hit_rate_at_k_p50": 1.0,
+      "hit_rate_at_k_p95": 1.0,
+      "mrr_mean": 0.8333333333333333,
+      "mrr_p50": 1.0,
+      "mrr_p95": 1.0,
+      "ndcg_at_k_mean": 0.8926604297388301,
+      "ndcg_at_k_p50": 1.0,
+      "ndcg_at_k_p95": 1.0,
+      "precision_at_k_mean": 0.25,
+      "precision_at_k_p50": 0.2,
+      "precision_at_k_p95": 0.4,
+      "recall_at_k_mean": 1.0,
+      "recall_at_k_p50": 1.0,
+      "recall_at_k_p95": 1.0
+    },
+    "total_costs": {
+      "~typesafe/jev-latest": {
+        "calls": 20,
+        "input_tokens": 6984,
+        "output_tokens": 440,
+        "cost_usd": 0.0013116
+      },
+      "openrouter/auto": {
+        "calls": 4,
+        "input_tokens": 1018,
+        "output_tokens": 202,
+        "cost_usd": 0.0002739
+      }
+    },
+    "ledger_summary": {
+      "calls": 24,
+      "input_tokens": 8002,
+      "output_tokens": 642,
+      "cost_usd": 0.0015855,
+      "latency_ms_p50": 465.19,
+      "latency_ms_p95": 1950.6
+    }
+  },
+  "per_query": [
+    {
+      "query": "Where is the Eiffel Tower located?",
+      "gold_ids": [
+        "demo-eiffel"
+      ],
+      "baseline": {
+        "ranked_ids": [
+          "demo-eiffel",
+          "demo-moon",
+          "demo-llm",
+          "demo-python",
+          "demo-rag"
+        ],
+        "latency_ms": 2.92,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        }
+      },
+      "recall_ceiling": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "jev": {
+        "ranked_ids": [
+          "demo-eiffel"
+        ],
+        "latency_ms": 967.59,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "call_ledger": [
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 746.1,
+            "input_tokens": 347,
+            "output_tokens": 22,
+            "cost_usd": 6.525e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 761.73,
+            "input_tokens": 348,
+            "output_tokens": 22,
+            "cost_usd": 6.54e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 776.36,
+            "input_tokens": 353,
+            "output_tokens": 22,
+            "cost_usd": 6.615e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 787.95,
+            "input_tokens": 347,
+            "output_tokens": 22,
+            "cost_usd": 6.525e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 964.59,
+            "input_tokens": 351,
+            "output_tokens": 22,
+            "cost_usd": 6.585e-05
+          }
+        ]
+      },
+      "llm_judge": {
+        "kept_ids": [
+          "demo-eiffel"
+        ],
+        "latency_ms": 2493.86,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "input_tokens": 255,
+        "output_tokens": 41,
+        "model": "openrouter/auto"
+      }
+    },
+    {
+      "query": "What makes Python popular as a language?",
+      "gold_ids": [
+        "demo-python"
+      ],
+      "baseline": {
+        "ranked_ids": [
+          "demo-python",
+          "demo-llm",
+          "demo-rag",
+          "demo-moon",
+          "demo-eiffel"
+        ],
+        "latency_ms": 0.28,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        }
+      },
+      "recall_ceiling": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "jev": {
+        "ranked_ids": [
+          "demo-python"
+        ],
+        "latency_ms": 408.92,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "call_ledger": [
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 359.9,
+            "input_tokens": 353,
+            "output_tokens": 22,
+            "cost_usd": 6.615e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 401.15,
+            "input_tokens": 347,
+            "output_tokens": 22,
+            "cost_usd": 6.525e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 400.49,
+            "input_tokens": 348,
+            "output_tokens": 22,
+            "cost_usd": 6.54e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 403.9,
+            "input_tokens": 347,
+            "output_tokens": 22,
+            "cost_usd": 6.525e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 404.84,
+            "input_tokens": 351,
+            "output_tokens": 22,
+            "cost_usd": 6.585e-05
+          }
+        ]
+      },
+      "llm_judge": {
+        "kept_ids": [
+          "demo-python"
+        ],
+        "latency_ms": 1950.6,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "input_tokens": 254,
+        "output_tokens": 26,
+        "model": "openrouter/auto"
+      }
+    },
+    {
+      "query": "Is the Moon made of cheese?",
+      "gold_ids": [
+        "demo-moon"
+      ],
+      "baseline": {
+        "ranked_ids": [
+          "demo-moon",
+          "demo-eiffel",
+          "demo-llm",
+          "demo-python",
+          "demo-rag"
+        ],
+        "latency_ms": 0.19,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.2,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        }
+      },
+      "recall_ceiling": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.2,
+        "hit_rate_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "jev": {
+        "ranked_ids": [
+          "demo-moon"
+        ],
+        "latency_ms": 491.78,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "call_ledger": [
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 344.37,
+            "input_tokens": 347,
+            "output_tokens": 22,
+            "cost_usd": 6.525e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 375.32,
+            "input_tokens": 346,
+            "output_tokens": 22,
+            "cost_usd": 6.51e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 378.94,
+            "input_tokens": 352,
+            "output_tokens": 22,
+            "cost_usd": 6.6e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 451.48,
+            "input_tokens": 346,
+            "output_tokens": 22,
+            "cost_usd": 6.51e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 490.92,
+            "input_tokens": 350,
+            "output_tokens": 22,
+            "cost_usd": 6.57e-05
+          }
+        ]
+      },
+      "llm_judge": {
+        "kept_ids": [
+          "demo-moon"
+        ],
+        "latency_ms": 1472.42,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        "input_tokens": 254,
+        "output_tokens": 55,
+        "model": "openrouter/auto"
+      }
+    },
+    {
+      "query": "What does RAG stand for and do?",
+      "gold_ids": [
+        "demo-rag",
+        "demo-llm"
+      ],
+      "baseline": {
+        "ranked_ids": [
+          "demo-python",
+          "demo-moon",
+          "demo-rag",
+          "demo-llm",
+          "demo-eiffel"
+        ],
+        "latency_ms": 0.24,
+        "metrics": {
+          "recall_at_k": 1.0,
+          "precision_at_k": 0.4,
+          "hit_rate_at_k": 1.0,
+          "mrr": 0.3333333333333333,
+          "ndcg_at_k": 0.5706417189553201
+        }
+      },
+      "recall_ceiling": {
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "hit_rate_at_k": 1.0,
+        "mrr": 0.3333333333333333,
+        "ndcg_at_k": 0.5706417189553201
+      },
+      "jev": {
+        "ranked_ids": [
+          "demo-rag"
+        ],
+        "latency_ms": 500.64,
+        "metrics": {
+          "recall_at_k": 0.5,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 0.6131471927654584
+        },
+        "call_ledger": [
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 367.92,
+            "input_tokens": 352,
+            "output_tokens": 22,
+            "cost_usd": 6.6e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 386.33,
+            "input_tokens": 348,
+            "output_tokens": 22,
+            "cost_usd": 6.54e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 390.46,
+            "input_tokens": 348,
+            "output_tokens": 22,
+            "cost_usd": 6.54e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 465.19,
+            "input_tokens": 354,
+            "output_tokens": 22,
+            "cost_usd": 6.63e-05
+          },
+          {
+            "pipe": "jev",
+            "model": "~typesafe/jev-latest",
+            "question_key": "relevance",
+            "latency_ms": 496.82,
+            "input_tokens": 349,
+            "output_tokens": 22,
+            "cost_usd": 6.555e-05
+          }
+        ]
+      },
+      "llm_judge": {
+        "kept_ids": [
+          "demo-rag"
+        ],
+        "latency_ms": 1924.94,
+        "metrics": {
+          "recall_at_k": 0.5,
+          "precision_at_k": 1.0,
+          "hit_rate_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 0.6131471927654584
+        },
+        "input_tokens": 255,
+        "output_tokens": 80,
+        "model": "openrouter/auto"
+      }
+    }
+  ]
+}
