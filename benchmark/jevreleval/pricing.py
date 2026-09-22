@@ -60,8 +60,8 @@ def load_price_table() -> PriceTable:
             if model_id is None or prompt is None or completion is None:
                 continue
             try:
-                prompt_rate = float(prompt) * _USD_PER_TOKEN
-                completion_rate = float(completion) * _USD_PER_TOKEN
+                prompt_rate = float(prompt) * _TOKENS_PER_UNIT
+                completion_rate = float(completion) * _TOKENS_PER_UNIT
             except (TypeError, ValueError):
                 continue
             # OpenRouter reports "-1" for endpoints whose pricing is not public;
@@ -96,8 +96,7 @@ def cost_usd(
     ) * output_rate
 
 
-#: OpenRouter reports pricing per 1 token; we keep per 1M in constants.
-_USD_PER_TOKEN = 1e-6
+#: OpenRouter reports pricing in USD per 1 token; we store USD per 1M.
 _TOKENS_PER_UNIT = 1_000_000
 
 

@@ -138,11 +138,18 @@ def pricing_table(document: dict) -> list[dict]:
     return [
         {
             "model": model,
-            "input_usd_per_1m": rate.get("input_usd_per_1m"),
-            "output_usd_per_1m": rate.get("output_usd_per_1m"),
+            "input_usd_per_1m": _price(rate.get("input_usd_per_1m")),
+            "output_usd_per_1m": _price(rate.get("output_usd_per_1m")),
         }
         for model, rate in sorted(document.get("pricing", {}).items())
     ]
+
+
+def _price(value: float | None) -> str:
+    """Format a USD-per-1M rate for display (``$10.0000`` or ``$0.000250``)."""
+    if value is None:
+        return ""
+    return f"${value:,.4f}" if value >= 0.01 else f"${value:.6f}"
 
 
 def _p95(sorted_values: list[float]) -> float:
@@ -257,6 +264,10 @@ def render(document: dict, path: Path) -> None:
         rows = pricing_table(document)
         if not rows:
             st.info("No pricing snapshot in this run.")
+        st.caption(
+            "Full OpenRouter catalog snapshot captured at run time; rates are USD "
+            "per 1M input/output tokens for every model the catalog listed."
+        )
         st.dataframe(rows, hide_index=True)
 
     with tab_compare:
