@@ -66,11 +66,13 @@ Each run writes `benchmark/results/<dataset>-<timestamp>.json` (override with
 
 ### Example nfcorpus run (threshold 0.5, k=20)
 
-| pipe        | Recall@20 | P@20 | MRR   | nDCG@20 | Hit@20 | cost   |
-|-------------|-----------|------|-------|---------|--------|--------|
-| BM25        | 0.171     | 0.152| 0.510 | 0.268   | 0.718  | $0     |
-| Jev filter  | 0.118     | 0.397| 0.492 | 0.217   | 0.545  | $0.73  |
-| LLM judge   | 0.129     | 0.464| 0.534 | 0.235   | 0.601  | $0.71  |
+| pipe        | Recall@20 | P@20 | MRR   | nDCG@20 | Hit@20 | cost                |
+|-------------|-----------|------|-------|---------|--------|---------------------|
+| BM25        | 0.171     | 0.152| 0.510 | 0.268   | 0.718  | $0 (0 calls)        |
+| Jev filter  | 0.118     | 0.397| 0.492 | 0.217   | 0.545  | $0.73 (6,460 calls) |
+| LLM judge   | 0.129     | 0.464| 0.534 | 0.235   | 0.601  | $0.71 (323 calls)   |
+
+^Costs are near-parity by coincidence: Jev does ~20× the judge's call volume (one per candidate vs one per query) but is ~19× cheaper per call.
 
 Jev trades recall for a doubling of precision at the default 0.5 threshold;
 because the candidate pool is the recall ceiling, the gap mostly falls out of
