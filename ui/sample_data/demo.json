@@ -1767,6 +1767,16 @@
     "openai/gpt-4": {
       "input_usd_per_1m": 30.0,
       "output_usd_per_1m": 60.0
+    },
+    "openrouter/auto": {
+      "input_usd_per_1m": 0.15,
+      "output_usd_per_1m": 0.6,
+      "source": "fallback"
+    },
+    "~typesafe/jev-latest": {
+      "input_usd_per_1m": 0.15,
+      "output_usd_per_1m": 0.6,
+      "source": "fallback"
     }
   },
   "aggregates": {
