@@ -80,6 +80,8 @@ BM25 retrieval, which itself misses 28% of queries entirely (hit-rate 0.718).
 
 ## Dashboard
 
+Live instance: [https://jev-relevance-evals.streamlit.app/](https://jev-relevance-evals.streamlit.app/)
+
 ```bash
 pip install -r ui/requirements.txt   # just streamlit
 streamlit run ui/app.py              # opens http://localhost:8501
